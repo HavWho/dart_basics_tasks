@@ -1,5 +1,7 @@
 import 'dart:io';
 
+//for cyrillic - 'package:translit/translit.dart';
+
 String? nameInput() {
   return stdin.readLineSync();
 }
@@ -18,15 +20,15 @@ void main() {
   }
 
   while (ages == null || ages < 0) {
-    print("How old are you (you can only enter numbers that are greater than 0)?");
+    print(
+        "How old are you (you can only enter numbers that are greater than 0)?");
     ages = agesInput();
   }
-  
+
   int? result = 100 - ages;
-  
+
   if (result > 0)
     print("$name, you need to live $result more years to be 100!");
   else
     print("$name, you are already 100 years old!");
-
 }
